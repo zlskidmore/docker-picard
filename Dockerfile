@@ -1,15 +1,18 @@
 # work from latest LTS ubuntu release
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # set the environment variables
-ENV version 2.18.12
+ENV version 2.18.27
 ENV PICARD /usr/bin/picard.jar
 
 # run update
 RUN apt-get update -y && apt-get install -y \
     libnss-sss \
     openjdk-8-jre \
-    curl
+    curl \
+    less \
+    vim  \
+    wget
 
 
 # download picard tools and change permissions
