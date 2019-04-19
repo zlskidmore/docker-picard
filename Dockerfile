@@ -2,8 +2,8 @@
 FROM ubuntu:18.04
 
 # set the environment variables
-ENV version 2.18.27
-ENV PICARD /usr/bin/picard.jar
+ENV version 2.19.1
+ENV PICARD /usr/bin/picard/picard.jar
 
 # run update
 RUN apt-get update -y && apt-get install -y \
