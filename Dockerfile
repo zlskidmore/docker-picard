@@ -2,8 +2,8 @@
 FROM ubuntu:18.04
 
 # set the environment variables
-ENV version 2.20.2
-ENV PICARD /usr/bin/picard/picard.jar
+ENV version 2.20.3
+ENV PICARD /usr/local/bin/picard/picard.jar
 
 # run update
 RUN apt-get update -y && apt-get install -y \
@@ -16,10 +16,10 @@ RUN apt-get update -y && apt-get install -y \
 
 
 # download picard tools and change permissions
-RUN mkdir -p /usr/bin/picard \
+RUN mkdir -p /usr/local/bin/picard \
     && curl -SL https://github.com/broadinstitute/picard/releases/download/${version}/picard.jar \
-    > /usr/bin/picard/picard.jar
-RUN chmod 0644 /usr/bin/picard/picard.jar
+    > /usr/local/bin/picard/picard.jar
+RUN chmod 0644 /usr/local/bin/picard/picard.jar
 
 # set default command to print help
-CMD ["java", "-jar", "/usr/bin/picard/picard.jar"]
+CMD ["java", "-jar", "/usr/local/bin/picard/picard.jar"]
