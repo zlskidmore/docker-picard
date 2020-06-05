@@ -2,7 +2,7 @@
 FROM ubuntu:18.04
 
 # set the environment variables
-ENV version 2.21.2
+ENV version 2.22.9
 ENV PICARD /usr/local/bin/picard/picard.jar
 
 # run update
