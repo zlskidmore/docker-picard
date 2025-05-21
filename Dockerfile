@@ -1,14 +1,14 @@
 # work from latest LTS ubuntu release
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
 # set the environment variables
-ENV version 2.27.4
-ENV PICARD /usr/local/bin/picard/picard.jar
+ENV version=3.4.0
+ENV PICARD=/usr/local/bin/picard/picard.jar
 
 # run update
 RUN apt-get update -y && apt-get install -y \
     libnss-sss \
-    openjdk-8-jre \
+    openjdk-17-jre \
     curl \
     less \
     vim  \
