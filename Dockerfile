@@ -12,7 +12,9 @@ RUN apt-get update -y && apt-get install -y \
     curl \
     less \
     vim  \
-    wget
+    wget \
+    r-base \
+    r-base-dev
 
 
 # download picard tools and change permissions
